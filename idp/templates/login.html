@@ -1,0 +1,14 @@
+<!doctype html>
+<html>
+  <body>
+    <h2>IdP Login (idp1.example.com)</h2>
+    <form method="post" action="/do_login">
+      <label>Username: <input name="username" value="user@example.com"/></label><br/>
+      <input type="hidden" name="acs" value="{{ acs }}"/>
+      <input type="hidden" name="in_response_to" value="{{ in_response_to }}"/>
+      <input type="hidden" name="sp_issuer" value="{{ sp_issuer }}"/>
+      <input type="hidden" name="relay" value="{{ relay }}"/>
+      <button type="submit">Login and send SAMLResponse</button>
+    </form>
+  </body>
+</html>

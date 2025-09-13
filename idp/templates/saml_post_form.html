@@ -1,0 +1,11 @@
+<!doctype html>
+<html>
+  <body onload="document.forms[0].submit()">
+    <p>Posting SAMLResponse to Service Provider...</p>
+    <form method="post" action="{{ acs_url }}">
+      <input type="hidden" name="SAMLResponse" value="{{ saml_response }}"/>
+      <input type="hidden" name="RelayState" value="{{ relay }}"/>
+      <noscript><button type="submit">Continue</button></noscript>
+    </form>
+  </body>
+</html>

@@ -1,0 +1,14 @@
+<!doctype html>
+<html>
+  <body>
+    <h3>Select IdP</h3>
+    <form method="post" action="/redirect_to_idp">
+      <input type="hidden" name="acs" value="{{ acs }}"/>
+      {% for idp in idps %}
+        <div>
+          <button type="submit" name="idp_sso" value="{{ idp.sso }}">{{ idp.entity }}</button>
+        </div>
+      {% endfor %}
+    </form>
+  </body>
+</html>

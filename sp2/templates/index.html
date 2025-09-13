@@ -1,0 +1,14 @@
+<!doctype html>
+<html>
+  <body>
+    <h2>SP2 (sp2.example.com:5002)</h2>
+    {% if logged %}
+      <p>Logged in as {{ name }}</p>
+      <p><a href="/service">Go to Service 2</a></p>
+      <p><a href="/logout">Logout</a></p>
+    {% else %}
+      <p>You are not logged in.</p>
+      <a href="/start_login">Access Service 2 (Login)</a>
+    {% endif %}
+  </body>
+</html>
